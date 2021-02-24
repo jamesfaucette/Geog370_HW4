@@ -14,6 +14,8 @@ Pthew=="
  crossorigin=""></script>
  <script src = "./leaflet/data/old_well_4326.geojson"></script>
  <script src = "./leaflet/data/chasedininghall.geojson"></script>
+ <script src = "./leaflet/data/morrisonhall.geojson"></script>
+ <script src = "./leaflet/data/kenanstadium.geojson"></script>
  </head>
  <body>
     <div id="mapid"></div>
@@ -31,6 +33,14 @@ Pthew=="
 
         L.marker([35.912064676772367, -79.0512352278691]).addTo(map)
         .bindPopup('Old Well') // YOU CAN CHANGE THE MESSAGE
+        .openPopup();
+
+        L.marker([35.904548, -79.046322]).addTo(map)
+        .bindPopup('This is Morrison Residence') // YOU CAN CHANGE THE MESSAGE
+        .openPopup();
+
+        L.marker([35.906903, -79.047846]).addTo(map)
+        .bindPopup('This is Kenan Stadium') // YOU CAN CHANGE THE MESSAGE
         .openPopup();
 
         L.geoJSON(uncwell).addTo(map)
@@ -58,6 +68,33 @@ Pthew=="
         return L.marker(latlng, {icon: chaseIcon});}}) // c
         .bindPopup(customPopup2) // d
         .addTo(map); //
+
+        L.geoJSON(morrison).addTo(map)
+        var morrisonIcon = L.icon({
+            iconUrl: 'https://pngimg.com/uploads/house/house_PNG74.png',
+            iconSize: [50,50],
+            popupAnchor: [0,0]
+        });
+        var customPopup3 = "Morrison Hall<br/><img src='https://upload.wikimedia.org/wikipedia/commons/c/c8/Morrison_Residence_Hall_at_UNC.jpg'width='100px'/>";
+        L.geoJSON(morrison, { // a
+        pointToLayer: function (feature, latlng) { // b
+        return L.marker(latlng, {icon: morrisonIcon});}}) // c
+        .bindPopup(customPopup3) // d
+        .addTo(map); //
+
+        L.geoJSON(stadium).addTo(map)
+        var stadiumIcon = L.icon({
+            iconUrl: 'https://toppng.com/uploads/preview/american-football-gridiron-football-culver-stockton-png-cartoon-football-11563587855mketabqiv2.png',
+            iconSize: [50,50],
+            popupAnchor: [0,0]
+        });
+        var customPopup4 = "Kenan Stadium<br/><img src='https://chapelboromedia.s3.amazonaws.com/uploads/2019/07/17141334/Kenan-Stadium-2-1200x640.png'width='100px'/>";
+        L.geoJSON(stadium, { // a
+        pointToLayer: function (feature, latlng) { // b
+        return L.marker(latlng, {icon: stadiumIcon});}}) // c
+        .bindPopup(customPopup4) // d
+        .addTo(map); //
+
     </script>
  This is not as hard as I thought.
  </body>
