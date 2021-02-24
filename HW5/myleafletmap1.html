@@ -29,9 +29,16 @@ Pthew=="
         .openPopup();
         L.geoJSON(uncwell).addTo(map)
         var uncIcon = L.icon({
-        iconUrl: 'https://faopharmacy.unc.edu/files/2018/04/Old-Well-Icon-Example.png',
-        iconSize: [50,50],
-        popupAnchor: [0,0]});
+            iconUrl: 'https://faopharmacy.unc.edu/files/2018/04/Old-Well-Icon-Example.png',
+            iconSize: [50,50],
+            popupAnchor: [0,0]
+        });
+        var customPopup = "UNC Well<br/><img src='https://global.unc.edu/files/2020/02/spring_4_09__12_054-768x511.jpg'width='100px'/>";
+        L.geoJSON(uncwell, { // a
+        pointToLayer: function (feature, latlng) { // b
+        return L.marker(latlng, {icon: uncIcon});}}) // c
+        .bindPopup(customPopup) // d
+        .addTo(map); //
     </script>
  This is not as hard as I thought.
  </body>
