@@ -28,6 +28,8 @@
   <script>
       var map = L.map('map').setView([35.2507735757891, -80.66480244144992], 14.0);
 
+      var brawleyhouse = L.marker([35.243957, -80.674733]).addTo(map);
+
       var OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	      maxZoom: 19,
 	      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
