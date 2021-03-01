@@ -47,7 +47,11 @@
         "Old Neighborhood": OldPhoto
       }
 
-      L.control.layers(daTiles).addTo(map);
+      var brawleyVector = {
+        "The Brawley House" : brawleyhouse
+      }
+
+      L.control.layers(brawleyVector, daTiles).addTo(map);
   </script>
 </body>
 </html>
