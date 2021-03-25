@@ -7,30 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Homework 8: 3 Choropleths Using Various Ratios and Modes of Categorization</h1>
+    <h1>Homework 9: A map of total deer harvested in Georgia by county.</h1>
     <h2>JT Faucette</h2>
-    <h3>This map shows the percentage of the population of each county that lives beneath the poverty line. I took the number of people below the poverty line and divided it by the total number of people in the county. The mode I used to categorize this was Natural Breaks as I thought it would be a good way to begin looking at the data and it made a nice looking map. The cons with natural breaks is that the seemingly arbitrary categories make for a strange legend. It is also harder to work witht he categories as they seem to be made at random.</h3>
+    <h3>This map topic was inspired by roommate, Ryan, an avid hunter and country boy. The dataset I used was provided by the Georgia Department of Natural Resources. I decided to use natural breaks in classifying the data in order to highlight the especially prolific deer hunting counties. I also chose my colors in order to do this. The "Magma" gradient in QGIS created a heatmap-like appearance. I decided to forego both a North and a scale as my choropleth is not intended to accurately show directions or distances, just deer.  </h3>
 
     <!-- a png image of your map will be embedded using the lines below  -->
-    <a href="Percent_Pop_Impov.png"> 
-        <img src="./MapandFiles/Percent_Pop_Impov.png" alt="your map" width='500px'>
+    <a href="deerdeathmap.png"> 
+        <img src="./MapandFiles/deerdeathmap.png" alt="your map" width='500px'>
         </a>
 
-
-    <h3>For this map I divided the population of people both under the poverty line and under the age of fifteen by the total number of people under the poverty line. I used pretty breaks for this because I knew that the ratio between the two would result in some messy percentages and I wanted the legend to be easy to understand. The con to this was that it automatically created many more categories than the last map.  In some areas of the map it is hard to tell the difference between counties and I am afraid that it isn't always very accurate.</h3>
-
-    <a href="Impoverished_Children.png"> 
-        <img src="./MapandFiles/Impoverished_Children.png" alt="your map" width='500px'>
-        </a>
-    <h3>For the final map I took the population of people both living under the poverty line and under the age of five and divided it by the total population to get the percent of the population that were poor babies. I used Equal Intervals for this because I knew the differences between the percentages would be samll and I expected most of the counties to share similar percentages. This mode also made particularly high percentage counties stand out such as Chattahoochee county in the Southwest. The issue with this is again that I am afraid that the counties are not incredibly accurate. It may not show all of the nuance that could be shown. A lot of the counties are the same color.</h3>
-     <a href="Poor_Children.png"> 
-        <img src="./MapandFiles/Poor_Children.png" alt="your map" width='500px'>
-         </a>
     <!-- here you will link your data sources -->
-    <h2>Data used for this project (Ignore)</h2>
-    <a href="./MapandFiles/GeorgiaMapCSV.csv">Link to cleaned CSV dataset</a>
+    <h2>Data used for this project found at https://gamecheckresults.gooutdoorsgeorgia.com/?reportId=348</h2>
+    <a href="./MapandFiles/Harvest_Report.csv">Link to cleaned CSV dataset</a>
     <p></p>
-    <a href="./MapandFiles/GeorgiaMapVector.geojson">Link to geoJSON</a>
+    <a href="./MapandFiles/deerharvestvector.geojson">Link to geoJSON</a>
 
 </body>
 </html>
